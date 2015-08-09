@@ -1,12 +1,19 @@
 {
-  "name": "Bookmark Mngmt",
-  "description": "My first Chrome App.",
-  "version": "0.1",
-  "manifest_version": 2,
-  "app": {
-    "background": {
-      "scripts": ["background.js"]
-    }
-  },
-  "icons": { "16": "assets/bookmark_16.png",  "128": "assets/bookmark_128.png" }
+    "name": "Bookmark Mngmt",
+    "description": "My first Chrome App.",
+    "version": "0.1",
+    "manifest_version": 2,
+
+    "app": {
+        "launch": {
+            "local_path": "app.html"
+        }
+    },
+
+    "permissions": [
+        "bookmarks"
+    ],
+
+
+    "icons": { "16": "assets/bookmark_16.png",  "128": "assets/bookmark_128.png" }
 }
