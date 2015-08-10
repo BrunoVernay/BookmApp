@@ -1,0 +1,26 @@
+{
+  "name": "bookmApp",
+  "version": "0.0.0",
+  "homepage": "https://github.com/BrunoVernay/BookmApp",
+  "authors": [
+    "BrunoVernay <BrunoVern.a@gmail.com>"
+  ],
+  "description": "Bookmark Chrome Extension",
+  "keywords": [
+    "Bookmark",
+    "Extension"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "polymer": "Polymer/polymer#^1.0.0",
+    "iron-elements": "PolymerElements/iron-elements#~1.0.3",
+    "paper-elements": "PolymerElements/paper-elements#~1.0.4"
+  }
+}
