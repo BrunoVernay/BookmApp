@@ -16,7 +16,7 @@ function dumpTreeNodes(bookmarkNodes) {
 }
 function dumpNode(bookmarkNode) {
   if (bookmarkNode.title) {
-    var span = $('<span>');
+    var span = $('<bookmark-card>');
     if (bookmarkNode.url) {
 	    var anchor = $('<a>');
 	    anchor.attr('href', bookmarkNode.url);

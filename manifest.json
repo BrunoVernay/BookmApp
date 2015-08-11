@@ -6,7 +6,7 @@
 
     "app": {
         "launch": {
-            "local_path": "build.html"
+            "local_path": "app.build.html"
         }
     },
 
