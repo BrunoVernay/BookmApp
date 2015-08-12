@@ -13,18 +13,23 @@
     .bookmark-header {
       margin-bottom: 10px;
     }
-    polyfill-next-selector { content: '.bookmark-header h2'; }
-    .bookmark-header ::content h2 {
-      margin: 0;
-      font-size: 1.8rem;
-      font-weight: 300;
-    }
     </style>
   <template>
     <div class="bookmark-header" layout horizontal center>
-      <content select="h2"></content>
+      <h2>{{title}}</h2>
     </div>
-    <content></content>
-  </template>
+</template>
+<script>
+  Polymer({
+    is: "bookmark-card",
+
+    properties: {
+      title: {
+        type: String,
+        notify: true
+       }
+    }
+  });
+</script>
 </dom-module>
 

@@ -1,0 +1,53 @@
+<link rel="import" href="../bower_components/polymer/polymer.html">
+<dom-module id="bookmark-service">
+    <style>
+    :host {
+      display: none;
+    }
+    </style>
+<script>
+  // element registration
+  Polymer({
+      is: "bookmark-service",
+
+      properties: {
+        bookmarks: {
+          type: Array,
+            // Use function for Arrays and Objects !
+          value: function() { return [{title:"init"}]; },
+          notify: true,
+          observer: 'bookready'
+        }
+      },
+  bookready: function(){
+    console.log("Bookmark ready: " + this.bookmarks[0].title + '.'); 
+  },
+
+  ready: function() {
+    var self = this;
+    chrome.bookmarks.getTree(
+        function(bookmarkTreeNodes) {
+           self.bookmarks = bookmarkTreeNodes[0].children;
+         } 
+    ); 
+    console.log(this.localName + '#' + this.id + ' was readied');
+    console.log("Bookmark: " + this.bookmarks[0].title + '.');
+ },
+
+  attached: function() {
+    console.log(this.localName + '#' + this.id + ' was attached');
+    console.log("Bookmark: " + this.bookmarks[0].title+ '.');
+  },
+
+  detached: function() {
+    console.log(this.localName + '#' + this.id + ' was detached');
+  },
+
+  attributeChanged: function(name, type) {
+    console.log(this.localName + '#' + this.id + ' attribute ' + name +
+      ' was changed to ' + this.getAttribute(name));
+  }
+});
+</script>
+</dom-module>
+
