@@ -11,11 +11,15 @@
 <template>
     <bookmark-service id="bookmark-service" bookmarks="{{bookmarks}}"></bookmark-service>
     
-    <div layout horizontal center>
+    <paper-material>
       <template is="dom-repeat" items="{{bookmarks}}" as="bookmark">
-        <bookmark-card title="{{bookmark.title}}" url={{bookmark.url}}></bookmark-card>
+      <bookmark-card 
+         title="[[bookmark.title]]" 
+         url="[[bookmark.url]]" 
+         children="[[bookmark.children]]">
+      </bookmark-card>
       </template>
-    </div>
+    </paper-material>
 </template>
 
 <script>

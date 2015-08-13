@@ -1,5 +1,6 @@
 
 <link rel="import" href="../bower_components/polymer/polymer.html">
+<link rel="import" href="bookmark-folder.html"> 
 
 <dom-module id="bookmark-card">
 
@@ -9,6 +10,8 @@
 <template>
   <paper-material>
     <paper-item>{{title}}</paper-item>
+    <paper-item>{{url}}</paper-item>
+    <bookmark-folder bookmarks="[[children]]"></bookmark-folder>
   </paper-material>
 </template>
 
@@ -23,6 +26,9 @@
        },
        url: {
          type: String
+       },
+       children: {
+         type: Array
        }
     }
   });

@@ -1,0 +1,35 @@
+
+<link rel="import" href="../bower_components/polymer/polymer.html">
+<link rel="import" href="bookmark-card.html">
+
+<dom-module id="bookmark-folder">
+
+<style>
+</style>
+
+<template>
+  <paper-material> 
+      <template is="dom-repeat" items="{{bookmarks}}" as="bookmark">
+        <bookmark-card 
+            title="[[bookmark.title]]"
+            url="[[bookmark.url]]"
+            children="[[bookmark.children]]" ></bookmark-card>
+      </template>
+   </paper-material>
+</template>
+
+<script>
+  Polymer({
+    is: "bookmark-folder",
+
+    properties: {
+      bookmarks: {
+        type: Array,
+        notify:true
+       }
+    }
+  });
+</script>
+
+</dom-module>
+

@@ -12,7 +12,7 @@
 
 <link href="bower_components/paper-material/paper-material.html" rel="import">
 <link href="bower_components/paper-item/paper-item.html" rel="import">
-<link href="bower_components/paper-tabs/paper-tabs.html" rel="import">
+<link href="bower_components/paper-menu/paper-menu.html" rel="import">
 
 <link rel="import" href="elements/bookmark-list.html">
 
@@ -27,10 +27,17 @@
      <paper-item>Drawer</paper-item>
    </paper-toolbar>
 
-   <paper-tabs id="tabs" selected="all" valueattr="name" self-end>
-   <paper-tab name="all">ALL</paper-tab>
-   <paper-tab name="favorites">FAVORITES</paper-tab>
-  </paper-tabs>
+   <paper-menu> 
+     <paper-material name="0">
+        <paper-item>Bar</paper-item>
+     </paper-material>
+     <paper-material name="1">
+        <paper-item>Other</paper-item>
+     </paper-material>
+     <paper-material name="2"> 
+        <paper-item>Mobile</paper-item> 
+     </paper-material> 
+  </paper-menu>
  </paper-header-panel>
 
   <paper-header-panel main>
