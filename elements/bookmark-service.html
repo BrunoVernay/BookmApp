@@ -1,10 +1,14 @@
+
 <link rel="import" href="../bower_components/polymer/polymer.html">
+
 <dom-module id="bookmark-service">
-    <style>
+
+<style>
     :host {
       display: none;
     }
-    </style>
+</style>
+
 <script>
   // element registration
   Polymer({
@@ -19,6 +23,7 @@
           observer: 'bookready'
         }
       },
+
   bookready: function(){
     console.log("Bookmark ready: " + this.bookmarks[0].title + '.'); 
   },
@@ -39,15 +44,12 @@
     console.log("Bookmark: " + this.bookmarks[0].title+ '.');
   },
 
-  detached: function() {
-    console.log(this.localName + '#' + this.id + ' was detached');
-  },
-
   attributeChanged: function(name, type) {
     console.log(this.localName + '#' + this.id + ' attribute ' + name +
       ' was changed to ' + this.getAttribute(name));
   }
 });
 </script>
+
 </dom-module>
 

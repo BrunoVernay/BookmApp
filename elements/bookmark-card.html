@@ -1,24 +1,17 @@
+
 <link rel="import" href="../bower_components/polymer/polymer.html">
+
 <dom-module id="bookmark-card">
-    <style>
-    :host {
-      display: block;
-      position: relative;
-      background-color: white;
-      padding: 20px;
-      width: 100%;
-      font-size: 1.2rem;
-      font-weight: 300;
-    }
-    .bookmark-header {
-      margin-bottom: 10px;
-    }
-    </style>
-  <template>
-    <div class="bookmark-header" layout horizontal center>
-      <h2>{{title}}</h2>
-    </div>
+
+<style>
+</style>
+
+<template>
+  <paper-material>
+    <paper-item>{{title}}</paper-item>
+  </paper-material>
 </template>
+
 <script>
   Polymer({
     is: "bookmark-card",
@@ -27,9 +20,13 @@
       title: {
         type: String,
         notify: true
+       },
+       url: {
+         type: String
        }
     }
   });
 </script>
+
 </dom-module>
 

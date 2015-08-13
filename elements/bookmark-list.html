@@ -1,28 +1,22 @@
+
 <link rel="import" href="../bower_components/polymer/polymer.html">
 <link rel="import" href="bookmark-service.html">
 <link rel="import" href="bookmark-card.html">
 
 <dom-module id="bookmark-list">
-    <style>
-    :host {
-      display: block;
-      position: relative;
-      background-color: white;
-      padding: 20px;
-      width: 100%;
-      font-size: 1.2rem;
-      font-weight: 300;
-    }
-    </style>
-  <template>
+
+<style>
+</style>
+
+<template>
     <bookmark-service id="bookmark-service" bookmarks="{{bookmarks}}"></bookmark-service>
     
     <div layout horizontal center>
       <template is="dom-repeat" items="{{bookmarks}}" as="bookmark">
-       <bookmark-card title="{{bookmark.title}}"></bookmark-card>
+        <bookmark-card title="{{bookmark.title}}" url={{bookmark.url}}></bookmark-card>
       </template>
-     </div>
-  </template>
+    </div>
+</template>
 
 <script>
   Polymer({
