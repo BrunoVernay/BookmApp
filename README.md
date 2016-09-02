@@ -1,4 +1,4 @@
-Chrome App with Polymer
+Chrome Extension with Polymer
 
 To manage Bookmarks
 
